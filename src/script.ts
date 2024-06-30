@@ -31,7 +31,7 @@ async function fetchComic(): Promise<void> {
     }
 
     const comicData: Comic = await comicResponse.json();
-    console.log('Comic data:', comicData); // Логируем данные комикса для проверки
+    console.log('Comic data:', comicData);
     displayComic(comicData);
   } catch (error) {
     console.error(error);
@@ -46,9 +46,8 @@ function displayComic(comic: Comic): void {
   const comicContainer = document.getElementById('comic');
   if (!comicContainer) return;
 
-  // Проверяем корректность значений month, day и year
   const year = parseInt(comic.year, 10);
-  const month = parseInt(comic.month, 10) - 1; // месяцы начинаются с 0 в JavaScript
+  const month = parseInt(comic.month, 10) - 1;
   const day = parseInt(comic.day, 10);
 
   if (isNaN(year) || isNaN(month) || isNaN(day)) {
