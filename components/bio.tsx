@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 const Bio: React.FC = () => (
   <section className="bio">
     <h2>About Me</h2>
     <div className="bio-container">
-      <img
-        src="IMG_2129.jpg"
+      <Image
+        src="/IMG_2129.jpg"
         alt="Portrait of Sergei Polin"
         className="portrait"
+        width={512}
+        height={512}
       />
       <p>
         Hi, I&apos;m Sergei Polin. I&apos;m a web developer with a passion for

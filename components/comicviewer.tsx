@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { formatDistanceToNow } from 'date-fns';
+import React, { useEffect, useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import Image from "next/image";
 
 interface Comic {
   month: string;
@@ -22,21 +23,21 @@ const ComicViewer: React.FC = () => {
   useEffect(() => {
     const fetchComic = async (): Promise<void> => {
       try {
-        const email = 's.polin@innopolis.university';
+        const email = "s.polin@innopolis.university";
         const urlParams = new URLSearchParams({ email });
         const response = await fetch(
-          `https://fwd.innopolis.university/api/hw2?${urlParams}`,
+          `https://fwd.innopolis.university/api/hw2?${urlParams}`
         );
         if (!response.ok) {
-          throw new Error('Failed to fetch comic ID');
+          throw new Error("Failed to fetch comic ID");
         }
 
         const comicId = await response.text();
         const comicResponse = await fetch(
-          `https://fwd.innopolis.university/api/comic?id=${comicId}`,
+          `https://fwd.innopolis.university/api/comic?id=${comicId}`
         );
         if (!comicResponse.ok) {
-          throw new Error('Failed to fetch comic');
+          throw new Error("Failed to fetch comic");
         }
 
         const comicData: Comic = await comicResponse.json();
@@ -66,7 +67,13 @@ const ComicViewer: React.FC = () => {
 
     return (
       <div className="comic-container">
-        <img src={comic.img} alt={comic.alt} className="comic-image" />
+        <Image
+          src={comic.img}
+          width={640}
+          height={271}
+          alt={comic.alt}
+          className="comic-image"
+        />
         <div className="comic-title">{comic.safe_title}</div>
         <div className="comic-date">{date.toLocaleDateString()}</div>
         <div className="comic-date--distance">

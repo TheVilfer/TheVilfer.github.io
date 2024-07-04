@@ -6,7 +6,7 @@
   --header-bg-color: #1f1f1f;
   --footer-bg-color: #1f1f1f;
   --hover-color: #00bfff;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -108,9 +108,7 @@ section h2 {
   padding: 1rem;
   width: 100%;
   max-width: 250px;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {

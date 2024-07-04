@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 const Contact: React.FC = () => (
   <section className="contact">
@@ -10,7 +11,7 @@ const Contact: React.FC = () => (
         target="_blank"
         rel="noreferrer"
       >
-        <img src="github-icon.png" alt="GitHub" />
+        <Image src="/github-icon.png" alt="GitHub" width={50} height={50} />
       </a>
       <a
         id="tg-link"
@@ -18,10 +19,10 @@ const Contact: React.FC = () => (
         target="_blank"
         rel="noreferrer"
       >
-        <img src="telegram-icon.png" alt="Telegram" />
+        <Image src="/telegram-icon.png" alt="Telegram" width={50} height={50} />
       </a>
       <a id="email" href="mailto:dev.vilfer@gmail.com">
-        <img src="email-icon.png" alt="Email" />
+        <Image src="/email-icon.png" alt="Email" width={50} height={50} />
       </a>
     </div>
   </section>
