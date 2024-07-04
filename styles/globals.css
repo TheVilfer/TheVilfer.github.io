@@ -108,7 +108,9 @@ section h2 {
   padding: 1rem;
   width: 100%;
   max-width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .project-card:hover {

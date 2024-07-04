@@ -26,7 +26,7 @@ const ComicViewer: React.FC = () => {
         const email = "s.polin@innopolis.university";
         const urlParams = new URLSearchParams({ email });
         const response = await fetch(
-          `https://fwd.innopolis.university/api/hw2?${urlParams}`
+          `https://fwd.innopolis.university/api/hw2?${urlParams}`,
         );
         if (!response.ok) {
           throw new Error("Failed to fetch comic ID");
@@ -34,7 +34,7 @@ const ComicViewer: React.FC = () => {
 
         const comicId = await response.text();
         const comicResponse = await fetch(
-          `https://fwd.innopolis.university/api/comic?id=${comicId}`
+          `https://fwd.innopolis.university/api/comic?id=${comicId}`,
         );
         if (!comicResponse.ok) {
           throw new Error("Failed to fetch comic");

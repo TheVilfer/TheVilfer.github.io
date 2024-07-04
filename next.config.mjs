@@ -2,14 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
-  images:{
+  images: {
     unoptimized: true,
-    remotePatterns:[
+    remotePatterns: [
       {
-        hostname:"imgs.xkcd.com"
-      }
-    ]
-  }
+        hostname: "imgs.xkcd.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
